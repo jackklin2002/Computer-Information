@@ -1,1 +1,9 @@
 # Computer Information
+
+This repository contains two PowerShell scripts designed to help system administrators collect and manage key system information from Windows machines. The scripts gather data such as BIOS details, local user accounts, operating system information, and installed applications, making it easy to export and review system reports.
+
+The System Information Export Script collects comprehensive system details and exports them to text files stored on a designated USB drive. It gathers BIOS information, including manufacturer, version, serial number, and more. It also lists local user accounts with details like name, security identifiers (SIDs), and account status. Additionally, the script retrieves the operating system version along with its update history and provides a complete list of installed applications with their versions and vendors. To use this script, update the $usbDriveLetter variable to match your USB drive’s letter. When executed, the script creates a folder named <MachineName>_Reports on the USB drive and stores the collected information in separate text files: <MachineName>_BIOSInfo.txt, <MachineName>_LocalUsersInfo.txt, <MachineName>_OSInfo.txt, and <MachineName>_InstalledApps.txt.
+
+The second script, Elevation Check and Execution Script, ensures that it runs with administrative privileges. If the script detects that it is not running as an administrator, it will automatically relaunch itself with elevated permissions. This feature is essential for scripts that require admin rights to access system-level data or perform administrative tasks. To use this script, save it alongside any PowerShell script that requires elevation, ensuring smooth execution without manual intervention.
+
+Together, these scripts simplify the process of collecting and managing system information, providing a reliable solution for administrators to monitor and document system configurations.
